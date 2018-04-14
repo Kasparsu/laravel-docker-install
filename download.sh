@@ -1,1 +1,0 @@
-curl -L https://github.com/laravel/laravel/archive/v5.6.0.tar.gz | tar xz -C ./ --strip 1
