@@ -1,11 +1,5 @@
 version: '2'
 services:
-  composer:
-    restart: 'no'
-    image: prooph/composer:7.2
-    command: install
-    volumes:
-      - .:/app
   # The Application
   app:
     build:
