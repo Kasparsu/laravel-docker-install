@@ -15,3 +15,7 @@ RUN pecl install xdebug \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN composer global require "laravel/installer"
+
+ENTRYPOINT ["/var/www/entrypoint.sh"]
+EXPOSE 9000
+CMD ["php-fpm"]
