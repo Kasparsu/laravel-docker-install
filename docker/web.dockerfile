@@ -1,3 +1,3 @@
-FROM nginx:1.10
+FROM danday74/nginx-lua
 
-ADD vhost.conf /etc/nginx/conf.d/default.conf
+ADD vhost.conf /nginx/conf/nginx.conf
