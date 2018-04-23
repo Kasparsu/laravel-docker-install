@@ -18,4 +18,3 @@ RUN composer global require "laravel/installer"
 
 ENTRYPOINT ["/var/www/entrypoint.sh"]
 EXPOSE 9000
-CMD ["php-fpm"]
