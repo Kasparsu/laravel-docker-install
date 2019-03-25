@@ -1,13 +1,13 @@
-FROM php:7.1-fpm
+FROM php:7.3.3-fpm
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git zip
+    apt-get install -y --no-install-recommends git zip libzip-dev unzip
 
 RUN apt-get update && apt-get install -y libmcrypt-dev \
     mysql-client libmagickwand-dev --no-install-recommends \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
-    && docker-php-ext-install mcrypt pdo_mysql zip
+    && docker-php-ext-install pdo_mysql zip
     
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
